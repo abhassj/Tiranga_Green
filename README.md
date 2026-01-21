@@ -1,47 +1,120 @@
-# Tiranga Green Solar Solutions
+# ☀️ Tiranga Green Solar Solutions
 
-> [!WARNING]
-> **Draft Version**: This is a first draft. Final changes and polish are yet to commence.
+### Empowering India with Sustainable Energy 🇮🇳
 
-## Project Structure
-The project is divided into three main applications:
-- **Frontend**: Customer-facing React application.
-- **Backend**: Node.js/Express API server.
-- **Admin**: Admin dashboard for managing content and leads.
+> **Live Status**: 🟢 Deployed & Operational
 
-## getting Started
+Tiranga Green Solar Solutions is a premier digital platform designed to streamline solar energy adoption for **Housing Societies**, **Commercial Enterprises**, and **Individual Homes**. This project features a high-performance customer-facing website and a robust administrative dashboard for managing leads and operations.
+
+---
+
+## 🚀 Live Demo
+
+Explore the live applications below:
+
+| Application | Role | Link |
+| :--- | :--- | :--- |
+| **Frontend** | Customer Portal | [**Visit Website**](https://tiranga-green-3ngouf92g-abhas-jaltares-projects.vercel.app) |
+| **Admin Panel** | Management Dashboard | [**Access Admin**](https://tiranga-green-e5un-c64zv4ca0-abhas-jaltares-projects.vercel.app) |
+| **Backend API** | Server (Health Check) | [**View API**](https://tiranga-green.onrender.com) |
+
+---
+
+## ✨ Key Features
+
+### 🌍 Customer Portal (Frontend)
+*   **Modern UI/UX**: Built with React and Tailwind CSS for a premium, responsive experience.
+*   **Interactive Forms**: Specialized enquiry forms for Housing Societies and Commercial projects.
+*   **Dynamic Content**: Swiper-based sliders and real-time validation.
+*   **Performance**: Optimized with Vite for lightning-fast load times.
+
+### 🛡️ Admin Dashboard
+*   **Lead Management**: Centralized view of all customer enquiries.
+*   **Secure Authentication**: JWT-based login protection for administrators.
+*   **Data Visualization**: (Planned) Charts and graphs for business insights.
+*   **Role-Based Access**: Secure endpoints ensuring data privacy.
+
+### ⚙️ Backend Core
+*   **RESTful API**: Scalable Node.js & Express architecture.
+*   **Database**: MongoDB with Mongoose for flexible data modeling.
+*   **Security**: Implemented Helmet, CORS, and Bcrypt for robust security.
+*   **Environment Aware**: Configurable for Development and Production environments.
+
+---
+
+## 🛠️ Technology Stack
+
+This project is built using the **MERN** ecosystem:
+
+*   **Frontend**: React.js, Vite, Tailwind CSS, Swiper.js
+*   **Backend**: Node.js, Express.js, MongoDB, Mongoose
+*   **Authentication**: JSON Web Tokens (JWT)
+*   **Deployment**: Vercel (Client/Admin) & Render (Server)
+
+---
+
+## 💻 Local Development Setup
+
+Follow these steps to run the project locally.
 
 ### Prerequisites
-- Node.js (v16 or higher recommended)
-- MongoDB (local or Atlas)
+*   Node.js (v18+)
+*   MongoDB (Local or Atlas Connection String)
 
-### Installation & Running
-You will need to install dependencies and start the development server for each application separately.
-
-#### 1. Backend
+### 1. Backend Setup
 ```bash
 cd backend
 npm install
-npm run dev
-# Server usually runs on http://localhost:5000
-```
-> **Note**: Ensure you create a `.env` file in the `backend` directory with your database string and other secrets.
 
-#### 2. Frontend
+# Create .env file
+echo "PORT=5000" > .env
+echo "MONGODB_URI=your_mongodb_connection_string" >> .env
+echo "JWT_SECRET=your_jwt_secret" >> .env
+
+npm run dev
+# Server runs at http://localhost:5000
+```
+
+### 2. Frontend Setup
 ```bash
 cd frontend
 npm install
+
+# Create .env file for local API mapping
+echo "VITE_API_URL=http://localhost:5000" > .env
+
 npm run dev
-# App usually runs on http://localhost:5173
+# Client runs at http://localhost:5173
 ```
 
-#### 3. Admin Panel
+### 3. Admin Setup
 ```bash
 cd admin
 npm install
+
+# Create .env file
+echo "VITE_API_URL=http://localhost:5000" > .env
+
 npm run dev
-# App usually runs on http://localhost:5174
+# Admin runs at http://localhost:5174
 ```
 
-## Environment Variables
-This project relies on environment variables for configuration. Since `.env` files are not checked into version control for security, you must create them locally in each directory (`backend`, `frontend`, `admin`) based on the requirements of the application (e.g., `VITE_BACKEND_URL`, `MONGO_URI`, `JWT_SECRET`, etc.).
+---
+
+## 📦 Deployment Configuration
+
+### Environment Variables
+For production deployment, ensure the following environment variables are set:
+
+**Frontend & Admin (Vercel)**
+*   `VITE_API_URL`: `https://tiranga-green.onrender.com`
+
+**Backend (Render)**
+*   `NODE_ENV`: `production`
+*   `MONGODB_URI`: *[Your Access String]*
+*   `JWT_SECRET`: *[Your Secret]*
+
+---
+
+### © 2026 Tiranga Green Solar Solutions
+*Building a Greener Future.*
