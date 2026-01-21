@@ -27,7 +27,7 @@ const Commercial = () => {
         setStatus({ type: '', message: '' });
 
         try {
-            const response = await fetch('http://localhost:5000/api/enquiries', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/enquiries`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
